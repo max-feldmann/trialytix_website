@@ -28,31 +28,35 @@ body {
   justify-content: space-between;
   background-color: transparent;
   color: white;
+  margin-bottom: -7rem;
+  margin-top: 1rem;
+  z-index: 100;
 }
+
 
 .main-navigation {
   list-style: none;
 
-  margin-top: 1rem;
   padding: 1rem;
   align-items: center;
 
   font-family: var(--primary-font), sans-serif;
   font-weight: 700;
   
-  background: rgba( 217, 255, 210, 0.3);
+  background: hsl(0 0% 0% / 0.5);
 }
 
 
 @supports (backdrop-filter: blur(1rem)) {
   /*If Browser supports Backdrop-Filter -> Use this instead of other background styles from above*/
   .main-navigation {
-    backdrop-filter: blur(0.5rem);
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(1rem);
   }
 }
 
 .main-navigation li {
-  margin-inline-end: 0.5rem;
+  margin-inline-end: 0.75rem;
 }
 
 .main-navigation span {
@@ -62,6 +66,7 @@ body {
 .main-navigation a {
   text-decoration: none;
   color: white;
+  font-weight: 400;
 }
 
 .logo-icon-header {
@@ -77,7 +82,7 @@ body {
     margin-top: 0;
     
     flex-direction: column;
-    padding: min(10vh, 10rem);
+    padding: min(20vh, 10rem) 3em;
 
     align-items: baseline;
   }
@@ -90,6 +95,16 @@ body {
 #hero-section {
   background: url('../img/heroSection_planetEarth.jpg');
   height: 100vh;
+
+}
+
+#hero-section img {
+  height: 200px;
+}
+
+.flex-container {
+  flex-direction: wrap;
+  justify-content: center;
 }
 
 /*Brand Elements*/
