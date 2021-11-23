@@ -10,17 +10,17 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 
 
+body {
+  font-family: sans-serif;
+}
+
+/* Tracking of global Variables - especially Branding - here */
+
 :root {
   --primary-color: #fb33ff;
   --primary-color-shade: #df2ae3;
   --primary-font: 'Space Mono';
 }
-
-
-body {
-  font-family: sans-serif;
-}
-
 /* Responsive Navbar Styles */
 
 .primary-header {
@@ -32,7 +32,6 @@ body {
   margin-top: 1rem;
   z-index: 100;
 }
-
 
 .main-navigation {
   list-style: none;
@@ -74,19 +73,54 @@ body {
   margin: 1rem;
 }
 
+.mobile-nav-toggle {
+  display: none;
+}
+
 @media (max-width: 35em) {
   
   .main-navigation {
     position: fixed;
     inset: 0 0 0 30%;
     margin-top: 0;
+    z-index: 1000;
     
     flex-direction: column;
     padding: min(20vh, 10rem) 3em;
-
+    
     align-items: baseline;
+    
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+  }
+  
+  .main-navigation[data-visible="true"] {
+    transform: translateX(0%);
   }
 
+  .mobile-nav-toggle {
+    position: absolute;
+    display: block;
+    
+    background: url('../img/menu_icon/hamburger_closed.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 3rem;
+    aspect-ratio: 1;
+    top: 2rem;
+    right: 2rem;
+    z-index: 9999;
+    border: 0;
+  }
+
+  .mobile-nav-toggle[aria-expanded="true"] {
+    background: url('../img/menu_icon/actual_hamburger.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 3rem;
+    aspect-ratio: 1;
+  }
 }
 
 /* Sections */
@@ -124,3 +158,5 @@ body {
   display: flex;
   gap: var(--gap, 1rem);
 }
+
+/* Accesibility */

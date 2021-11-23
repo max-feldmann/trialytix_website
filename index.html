@@ -15,6 +15,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
+  <script src="navBar.js" defer></script>
+
 </head>
 
 <body>
@@ -22,8 +24,10 @@
 
         <img src="assets/brand-assets/demo-logo.png" href="#" class="logo-icon-header">
 
+        <button class="mobile-nav-toggle" aria-controls="main-navigation" aria-expanded="false"></button>
+
         <nav>
-            <ul class="main-navigation flex">
+            <ul data-visible="false" class="main-navigation flex">
                 <li><a href="#"><span aria-hidden="true">00</span> Item</a></li>
                 <li><a href="#"><span aria-hidden="true">01</span> Item</a></li>
                 <li><a href="#"><span aria-hidden="true">02</span> Item</a></li>
