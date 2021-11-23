@@ -8,8 +8,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   background: transparent;
 }
 
+
+
 :root {
   --primary-color: #fb33ff;
+  --primary-color-shade: #df2ae3;
   --primary-font: 'Space Mono';
 }
 
@@ -21,27 +24,35 @@ body {
 /* Responsive Navbar Styles */
 
 .primary-header {
-  height: 3.5rem;
   align-items: center;
   justify-content: space-between;
   background-color: transparent;
   color: white;
 }
 
-.header-offset {
-  margin-bottom: -3.5em;
-}
-
 .main-navigation {
   list-style: none;
-  padding: 0;
-  margin-right: 1rem;
+
+  margin-top: 1rem;
+  padding: 1rem;
+  align-items: center;
+
   font-family: var(--primary-font), sans-serif;
   font-weight: 700;
+  
+  background: rgba( 217, 255, 210, 0.3);
+}
+
+
+@supports (backdrop-filter: blur(1rem)) {
+  /*If Browser supports Backdrop-Filter -> Use this instead of other background styles from above*/
+  .main-navigation {
+    backdrop-filter: blur(0.5rem);
+  }
 }
 
 .main-navigation li {
-  margin: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 .main-navigation span {
@@ -58,6 +69,21 @@ body {
   margin: 1rem;
 }
 
+@media (max-width: 35em) {
+  
+  .main-navigation {
+    position: fixed;
+    inset: 0 0 0 30%;
+    margin-top: 0;
+    
+    flex-direction: column;
+    padding: min(10vh, 10rem);
+
+    align-items: baseline;
+  }
+
+}
+
 /* Sections */
 
 
@@ -70,9 +96,9 @@ body {
 
 .primary-button {
   background-color: var(--primary-color);
-  border: none;
+  border-color: var(--primary-color-shade);
   border-radius: 5px;
-  padding: 0.25rem 1rem;
+  padding: 0.5rem 1rem;
   font-family: var(--primary-font), sans-serif;
   font-weight: 700;
 }
