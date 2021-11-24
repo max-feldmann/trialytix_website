@@ -236,6 +236,13 @@ border-top: solid 1px white;
   min-height: 100vh;
 }
 
+.hero-section-slim {
+  background: url('../img/pattern_pinkAndBlueTriangles_dark.png');
+  background-size: cover;
+
+  min-height: 50vh;
+}
+
 .hero-subline {
   font-size: 22px;
   margin: 1rem 0;
@@ -330,7 +337,22 @@ border-top: solid 1px white;
   height: 3em;
 }
 
+.basic-content-page-section {
+  background: var(--brand_black);
+  color: #ffffff;
+  padding: 10rem;
+}
+
 @media (max-width: 55em) {
+
+  .hero-section-slim {
+    min-height: 33vh;
+  }
+
+  .basic-content-page-section {
+    padding: 2rem;
+  }
+
   .covid-info-runner h2 {
     margin-top: 1rem;
     font-size: 20px;
