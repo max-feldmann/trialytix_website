@@ -24,17 +24,21 @@ body {
   --link-color: #ffffff; 
 
   --primary-font: 'Space Mono';
-  --secondary-font: 'Roboto';
+  --secondary-font: 'Nunito Sans';
 }
 
 /* Basic Element Styles */
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--primary-font)
+  font-family: var(--secondary-font)
 }
 
 h1 {
-  font-size: 45px;
+  font-size: 100px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-style: italic;
+  line-height: 0.9;
 }
 
 a {
@@ -53,7 +57,7 @@ p {
 @media (max-width: 55em) {
 
   h1 {
-    font-size: 25px;
+    font-size: 60px;
   }
 
 }
@@ -176,6 +180,8 @@ p {
 .primary-footer-columns {
 grid-template-columns: 1fr 1fr 1fr;
 justify-items: center;
+padding-top: 5rem;
+border-top: solid 1px white;
 }
 
 .primary-footer li {
@@ -238,10 +244,10 @@ justify-items: center;
   margin-top: 5rem;
   padding: 3rem 6rem;
 
-  box-shadow: 5px 10px 16px 10px rgba(0,0,0,0.25);
-
-  transform: rotate(3deg);  
+  transform: rotate(6deg);  
   transform-origin: bottom right;
+
+  transition: transform 0.3s ease;
 }
 
 .event-card-grid {
@@ -297,7 +303,7 @@ justify-items: center;
 .covid-info-runner {
   background: var(--brand_black);
   text-align: center;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 
@@ -364,6 +370,10 @@ justify-items: center;
 
 .section-wrapper {
   width: 80%;
+}
+
+.box-shadow {
+  box-shadow: 5px 10px 16px 10px rgba(0,0,0,0.25);
 }
 
 /* Accesibility */

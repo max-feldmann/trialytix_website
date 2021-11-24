@@ -16,6 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <script src="navBar.js" defer></script>
 
@@ -29,7 +30,7 @@
         <button class="mobile-nav-toggle" aria-controls="main-navigation" aria-expanded="false"></button>
 
         <nav>
-            <ul data-visible="false" class="main-navigation backdrop-filter-blur flex">
+            <ul data-visible="false" class="main-navigation backdrop-filter-blur box-shadow flex">
                 <li><a href="index.html"><span aria-hidden="true">00</span> Home</a></li>
                 <li><a href="#"><span aria-hidden="true">01</span> Item</a></li>
                 <li><a href="#"><span aria-hidden="true">02</span> Item</a></li>
@@ -45,13 +46,13 @@
 
             <div class="grid flex-center two-column-section">
                 <div>
-                    <h1>This is our h1</h1>
+                    <h1>This is a headline</h1>
                     <p class="hero-subline">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
                 </div>
                 
                 <div class="flex">
 
-                    <div class="event-card backdrop-filter-blur">
+                    <div class="event-card backdrop-filter-blur box-shadow">
 
                         <img src="assets/icons/letter-p.png" class="event-card-icon">
 
@@ -123,5 +124,6 @@
         <p>Brought to you with 💜 and 💡 by <a href="https://www.space-4.de" target="_blank">Space Four</a></p>
     </div>
 
+    <script>window.setInterval(() => {document.querySelector('.event-card').style.transform = `rotate(${4 + 4 * Math.random()}deg)`},1000)</script>
 </body>
 </html>
