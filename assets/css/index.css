@@ -8,10 +8,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   background: transparent;
 }
 
-
-
 body {
   font-family: sans-serif;
+  color: white;
 }
 
 /* Tracking of global Variables - especially Branding - here */
@@ -21,6 +20,34 @@ body {
   --primary-color-shade: #df2ae3;
   --primary-font: 'Space Mono';
 }
+
+/* Basic Element Styles */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--primary-font)
+}
+
+h1 {
+  font-size: 45px;
+}
+
+p {
+  margin: 15px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+@media (max-width: 55em) {
+
+  h1 {
+    font-size: 25px;
+  }
+
+}
+
 /* Responsive Navbar Styles */
 
 .primary-header {
@@ -42,13 +69,17 @@ body {
   font-family: var(--primary-font), sans-serif;
   font-weight: 700;
   
+}
+
+.backdrop-filter-blur {
+  /* Fallback if @supports does not work */
   background: hsl(0 0% 0% / 0.5);
 }
 
 
 @supports (backdrop-filter: blur(1rem)) {
   /*If Browser supports Backdrop-Filter -> Use this instead of other background styles from above*/
-  .main-navigation {
+  .backdrop-filter-blur {
     background: hsl(0 0% 100% / 0.1);
     backdrop-filter: blur(1rem);
   }
@@ -123,24 +154,78 @@ body {
   }
 }
 
+/* Primary Footer*/
+
 /* Sections */
 
-
 #hero-section {
-  background: url('../img/heroSection_planetEarth.jpg');
-  height: 100vh;
+  background: url('../img/pattern_pinkAndBlueTriangles_dark.png');
+  background-size: cover;
 
+  min-height: 100vh;
 }
 
-#hero-section img {
-  height: 200px;
+.two-column-section {
+  grid-auto-columns: 1fr;
+  grid-gap: 50px;
+  grid-template-columns: 1fr 1fr;
 }
 
-.flex-container {
-  flex-direction: wrap;
-  justify-content: center;
+.event-card {
+  border-radius: .75rem;
+
+  margin-top: 5rem;
+  padding: 3rem 4rem;
+
+  box-shadow: 5px 10px 16px 10px rgba(0,0,0,0.25);
+
+  transform: rotate(3deg);  
+  transform-origin: bottom right;
 }
 
+.event-card-button {
+  margin-top: 1rem;
+}
+
+.event-card h4 {
+  color:chartreuse;
+}
+
+@media (max-width: 55em) {
+
+  .two-column-section {
+    grid-template-columns: 1fr;
+  }
+
+  .two-column-section {
+    padding: 10rem 0;
+  }
+
+  .event-card {
+    margin-top: 0;
+  }
+}
+
+.covid-info-runner {
+  background: black;
+  text-align: center;
+  padding: 1rem;
+}
+
+
+.covid-info-runner h2 {
+  color: white;
+  font-size: 25px;
+}
+
+.covid-info-runner p {
+  font-size: 18px;
+  font-family: var(--primary-font)
+}
+
+.medical-mask {
+  height: 3em;
+}
 /*Brand Elements*/
 
 .primary-button {
@@ -158,5 +243,27 @@ body {
   display: flex;
   gap: var(--gap, 1rem);
 }
+
+@media (max-width: 55em) {
+
+  .flex {
+    gap: var(--gap, 0.5rem)
+  }
+  
+}
+
+.grid {
+  display: grid;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.section-wrapper {
+  width: 80%;
+}
+
 
 /* Accesibility */

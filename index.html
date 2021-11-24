@@ -11,6 +11,7 @@
 
   <link rel="stylesheet" href="assets/css/index.css">
 
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -27,7 +28,7 @@
         <button class="mobile-nav-toggle" aria-controls="main-navigation" aria-expanded="false"></button>
 
         <nav>
-            <ul data-visible="false" class="main-navigation flex">
+            <ul data-visible="false" class="main-navigation backdrop-filter-blur flex">
                 <li><a href="#"><span aria-hidden="true">00</span> Item</a></li>
                 <li><a href="#"><span aria-hidden="true">01</span> Item</a></li>
                 <li><a href="#"><span aria-hidden="true">02</span> Item</a></li>
@@ -37,9 +38,49 @@
         </nav>
     </header>
 
-    <section id="hero-section">
+    <section id="hero-section" class="flex flex-center">
 
+        <div class="section-wrapper">
+
+            <div class="grid flex-center two-column-section">
+                <div>
+                    <h1>This is our h1</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                </div>
+                
+                <div class="flex">
+                    <div class="event-card backdrop-filter-blur">
+                        <h4>Venue</h4>
+                        <p class="event-card-description">Kapuzinerstraße 15</p>
+                        <h4>Doors</h4>
+                        <p class="event-card-description">20:30</p>
+                        <h4>Fee</h4>
+                        <p class="event-card-description">10€ p.P.</p>
+                        <button class="primary-button event-card-button"><a href="#">Buy Tickets</a></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
+
+    <section>
+        <div class="covid-info-runner">
+            <img src="assets/icons/medical-mask.png" class="medical-mask">
+            <h2>Please respect any Covid-19 regulations at the venue</h2>
+            <p>Wear a mask || 2G+ is a must || Present certificates || Enjoy a safe evening!</p>
+        </div>
+    </section>
+
+    <footer class="primary-footer">
+
+        <div class="grid">
+            <div><h4>Navi 1</h4></div>
+            <div><h4>Navi 1</h4></div>
+            <div><h4>Navi 1</h4></div>
+        </div>
+
+    </footer>
 
 </body>
 </html>
