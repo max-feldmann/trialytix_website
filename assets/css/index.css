@@ -77,12 +77,18 @@ p {
 .main-navigation {
   list-style: none;
 
+  z-index: 9999;
   padding: 1rem;
   align-items: center;
 
   font-family: var(--primary-font), sans-serif;
   font-weight: 700;
   
+  border-radius: .75rem 0 0 .75rem;
+
+  position: fixed;
+  top: 1rem;
+  right: 0;
 }
 
 .backdrop-filter-blur {
@@ -144,7 +150,10 @@ p {
   }
 
   .mobile-nav-toggle {
-    position: absolute;
+    position: fixed;
+    top: 1rem;
+    right: 0;
+
     display: block;
     
     background: url('../img/menu_icon/hamburger_closed.png');
@@ -247,7 +256,7 @@ border-top: solid 1px white;
   transform: rotate(6deg);  
   transform-origin: bottom right;
 
-  transition: transform 0.3s ease;
+  /* transition: transform 0.3s ease; > Script for Wiggling Effect. Script is at the end of Body in index.html */
 }
 
 .event-card-grid {
