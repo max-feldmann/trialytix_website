@@ -9,7 +9,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 body {
-  font-family: sans-serif;
+  font-family: var(--secondary-font);
   color: white;
 }
 
@@ -18,7 +18,12 @@ body {
 :root {
   --primary-color: #fb33ff;
   --primary-color-shade: #df2ae3;
+  --brand_black: #0e1111;
+
+  --link-color: #ffffff; 
+
   --primary-font: 'Space Mono';
+  --secondary-font: 'Roboto';
 }
 
 /* Basic Element Styles */
@@ -31,14 +36,18 @@ h1 {
   font-size: 45px;
 }
 
-p {
-  margin: 15px 0;
-}
-
 a {
+  color: var(--link-color);
   text-decoration: none;
 }
 
+a:visited {
+  color: var(--link-color);
+}
+
+p {
+  line-height: 1.5;
+}
 
 @media (max-width: 55em) {
 
@@ -156,6 +165,52 @@ a {
 
 /* Primary Footer*/
 
+.primary-footer {
+  padding: 5rem 0;
+  color: white;
+  background: var(--brand_black);
+  justify-items: center
+}
+
+.primary-footer-columns {
+grid-template-columns: 1fr 1fr 1fr;
+justify-items: center;
+}
+
+.primary-footer li {
+  list-style: none;
+  font-family: var(--secondary-font);
+  margin-bottom: 0.5rem;
+}
+
+.primary-footer li button {
+  margin-top: 2rem;
+}
+
+.nav-label {
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.sp4-note {
+  font-family: var(--primary-font);
+  font-size: 10px;
+  text-align: center;
+  background: black;
+}
+
+.sp4-note p {
+  padding: 5px;
+}
+
+@media (max-width: 55em) {
+  .primary-footer-columns {
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 1.5rem;
+    justify-items: start;
+  }
+}
+
 /* Sections */
 
 #hero-section {
@@ -193,6 +248,10 @@ a {
 
 @media (max-width: 55em) {
 
+  #hero-section p {
+    margin-top: 2rem;
+  }
+
   .two-column-section {
     grid-template-columns: 1fr;
   }
@@ -207,7 +266,7 @@ a {
 }
 
 .covid-info-runner {
-  background: black;
+  background: var(--brand_black);
   text-align: center;
   padding: 1rem;
 }
@@ -226,6 +285,19 @@ a {
 .medical-mask {
   height: 3em;
 }
+
+@media (max-width: 55em) {
+  .covid-info-runner h2 {
+    margin-top: 1rem;
+    font-size: 20px;
+  }
+
+  .covid-info-runner p {
+    margin-top: 1rem;
+    font-size: 15px;
+  }
+}
+
 /*Brand Elements*/
 
 .primary-button {
@@ -264,6 +336,5 @@ a {
 .section-wrapper {
   width: 80%;
 }
-
 
 /* Accesibility */
