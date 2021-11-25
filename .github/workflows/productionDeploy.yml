@@ -23,4 +23,4 @@ jobs:
         password: ${{ secrets.STRATO_MASTERPASSWORD }}
         protocol: ftps
         port: 22
-        local-dir: ./philtrum-run/
+        local-dir: /philtrum-run/
