@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "Passwortgeschützter Bereich"
-AuthUserFile ../event-website/.htpasswd
+AuthUserFile /event-website/.htpasswd
 Require valid-user
