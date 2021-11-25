@@ -21,6 +21,4 @@ jobs:
         ftp-server: ssh.strato.de
         ftp-username: dev.space-4.de
         ftp-password: ${{ secrets.STRATO_MASTERPASSWORD }}
-        protocol: ftps-legacy
-        port: 22
         local-dir: ../philtrum-run/
