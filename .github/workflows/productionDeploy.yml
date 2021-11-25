@@ -16,11 +16,11 @@ jobs:
         fetch-depth: 2
 
     - name: FTP Deploy 
-      uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        server: ssh.strato.de
-        username: dev.space-4.de
-        password: ${{ secrets.STRATO_MASTERPASSWORD }}
+        ftp-server: ssh.strato.de
+        ftp-username: dev.space-4.de
+        ftp-password: ${{ secrets.STRATO_MASTERPASSWORD }}
         protocol: ftps-legacy
         port: 22
         local-dir: ../philtrum-run/
