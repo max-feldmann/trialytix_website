@@ -1,0 +1,10 @@
+.basic-content-page-section {
+    color: #ffffff;
+    padding: 10rem;
+  }
+
+@media (max-width: 55em) {
+    .basic-content-page-section {
+        padding: 2rem;
+    }
+}
