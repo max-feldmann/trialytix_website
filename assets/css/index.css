@@ -11,6 +11,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 body {
   font-family: var(--secondary-font);
   color: white;
+  background-color: var(--brand_black);
 }
 
 /* Tracking of global Variables - especially Branding - here */
@@ -25,6 +26,12 @@ body {
 
   --primary-font: 'Space Mono';
   --secondary-font: 'Nunito Sans';
+}
+
+.signature-headline-style {
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
 }
 
 /* Basic Element Styles */
@@ -310,20 +317,15 @@ border-top: solid 1px white;
   color:var(--secondary-color);
 }
 
-@media (max-width: 55em) {
+.teaser {
+  padding: 0.5rem 0;
+  background-color: var(--primary-color-shade);
+}
 
-  .two-column-section {
-    grid-template-columns: 1fr;
-  }
-
-  .two-column-section {
-    padding: 10rem 0;
-  }
-
-  .event-card {
-    margin-top: 0;
-    padding: 3rem 4rem;
-  }
+.teaser h2 {
+  font-family: var(--secondary-font);
+  font-size: 50px;
+  text-align: center;
 }
 
 .covid-info-runner {
@@ -354,13 +356,30 @@ border-top: solid 1px white;
 }
 
 @media (max-width: 55em) {
+  
+  .two-column-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .two-column-section {
+    padding: 10rem 0;
+  }
+  
+  .event-card {
+    margin-top: 0;
+    padding: 3rem 4rem;
+  }
 
   .hero-section-slim {
     min-height: 33vh;
   }
-
+  
   .basic-content-page-section {
     padding: 2rem;
+  }
+
+  .teaser h2{
+    font-size: 28px;
   }
 
   .covid-info-runner h2 {
@@ -415,6 +434,10 @@ border-top: solid 1px white;
 
 .box-shadow {
   box-shadow: 5px 10px 16px 10px rgba(0,0,0,0.25);
+}
+
+.box-shadow-inset {
+  box-shadow: inset 0px 5px 15px 5px rgba(0,0,0,0.25);
 }
 
 /* Accesibility */
