@@ -1,19 +1,30 @@
-# This is a basic workflow to help you get started with Actions
+name: Prod Deploy
 
-name: ProdDeploy
-
-# Controls when the workflow will run
-on: push
-
+on:
+  push:
+    branches: [ master ]
 jobs:
-  web-deploy:
-    name: 🎉 Deploy
+  build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./philtrum-run
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 2
 
-    - name: 📂 Sync files
+    - name: Install Composer Dependencies
+      run: composer install --prefer-dist --no-progress --no-suggest
+
+    - name: npm install
+      run: npm install
+
+    - name: npm run bundle
+      run: npm run bundle
+
+    - name: FTP Deploy 
       uses: SamKirkland/FTP-Deploy-Action@4.2.0
       with:
         server: ssh.strato.de
@@ -21,9 +32,4 @@ jobs:
         password: ${{ secrets.STRATO_MASTERPASSWORD }}
         protocol: ftps
         port: 22
-        exclude: |
-          **/.git*
-          **/.git*/**
-          **/node_modules/**
-          fileToExclude.txt
-          fileToExclude.txt
+        local-dir: ./philtrum-run
