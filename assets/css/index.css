@@ -93,14 +93,18 @@ p {
 
 .backdrop-filter-blur {
   /* Fallback if @supports does not work */
-  background: hsl(0 0% 0% / 0.6);
+  background: hsl(0 0% 80% / 0.8);
 }
 
+.backdrop-filter-blur-menu {
+  /* Fallback if @supports does not work */
+  background: hsl(0 0% 80% / 0.9);
+}
 
 @supports (backdrop-filter: blur(1rem)) {
   /*If Browser supports Backdrop-Filter -> Use this instead of other background styles from above*/
   .backdrop-filter-blur {
-    background: hsl(0 0% 80% / 0.2);
+    background: hsl(0 0% 100% / 0.1);
     backdrop-filter: blur(1rem);
   }
 }
@@ -111,11 +115,12 @@ p {
 
 .main-navigation span {
   font-weight: 700;
+  color: var(--brand_black);
 }
 
 .main-navigation a {
   text-decoration: none;
-  color: white;
+  color: var(--brand_black);
   font-weight: 400;
 }
 
@@ -295,9 +300,12 @@ border-top: solid 1px white;
 
 .event-card-description {
   margin: 0.5rem 0;
+  color: var(--brand_black);
+  font-family: var(--primary-font)
 }
 
 .event-card h4 {
+  font-family: var(--primary-font);
   color:var(--secondary-color);
 }
 
@@ -386,7 +394,7 @@ border-top: solid 1px white;
 @media (max-width: 55em) {
 
   .flex {
-    gap: var(--gap, 0.5rem)
+    gap: var(--gap, 1rem)
   }
   
 }
