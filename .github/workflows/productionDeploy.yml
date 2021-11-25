@@ -9,7 +9,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./
+        working-directory: ./philtrum-run/
     steps:
     - uses: actions/checkout@v2
       with:
@@ -21,4 +21,4 @@ jobs:
         ftp-server: ssh.strato.de
         ftp-username: dev.space-4.de
         ftp-password: ${{ secrets.STRATO_MASTERPASSWORD }}
-        local-dir: ./philtrum-run/
+        local-dir: ./
