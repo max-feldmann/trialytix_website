@@ -93,7 +93,7 @@ p {
 
 .backdrop-filter-blur {
   /* Fallback if @supports does not work */
-  background: hsl(0 0% 0% / 0.5);
+  background: hsl(0 0% 0% / 0.6);
 }
 
 
@@ -230,14 +230,14 @@ border-top: solid 1px white;
 /* Sections */
 
 #hero-section {
-  background: url('../img/pattern_pinkAndBlueTriangles_dark.png');
+  background: url('../img/pattern_pinkAndBlueTriangles_dark_web-optimized.png');
   background-size: cover;
 
   min-height: 100vh;
 }
 
 .hero-section-slim {
-  background: url('../img/pattern_pinkAndBlueTriangles_dark.png');
+  background: url('../img/pattern_pinkAndBlueTriangles_dark_web-optimized.png');
   background-size: cover;
 
   min-height: 50vh;
@@ -313,6 +313,7 @@ border-top: solid 1px white;
 
   .event-card {
     margin-top: 0;
+    padding: 3rem 4rem;
   }
 }
 
