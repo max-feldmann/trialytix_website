@@ -21,6 +21,6 @@ jobs:
         server: ssh.strato.de
         username: dev.space-4.de
         password: ${{ secrets.STRATO_MASTERPASSWORD }}
-        protocol: sftp
+        protocol: ftps-legacy
         port: 22
         local-dir: ../philtrum-run/
