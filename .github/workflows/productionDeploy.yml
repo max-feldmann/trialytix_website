@@ -18,7 +18,7 @@ jobs:
     - name: FTP Deploy 
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        ftp-server: ftps://ssh.strato.de:22
+        ftp-server: ftps-legacy://ssh.strato.de:22
         ftp-username: dev.space-4.de
         ftp-password: ${{ secrets.STRATO_MASTERPASSWORD }}
         local-dir: ./
