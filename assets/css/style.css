@@ -73,7 +73,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   
   .primary-header {
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Push Logo to left, Nav-List to right */
     background-color: transparent;
     color: white;
     margin-bottom: -7rem;
@@ -120,7 +120,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     margin-inline-end: 0.75rem;
   }
   
-  .main-navigation span {
+  .main-navigation span { /*Numbers in Nav*/
     font-weight: 700;
     color: var(--brand_black);
   }
@@ -137,30 +137,33 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   }
   
   .mobile-nav-toggle {
-    display: none;
+    display: none; /* Nav Toggle is removed from DOM on desktop */
   }
   
   @media (max-width: 35em) {
     
+    
     .main-navigation {
       position: fixed;
-      inset: 0 0 0 30%;
+      inset: 0 0 0 30%; /* Controls "width" of mobile nav component */
       margin-top: 0;
       z-index: 1000;
       
       flex-direction: column;
-      padding: min(20vh, 10rem) 3em;
+      padding: min(20vh, 10rem) 3em; /* Min-Function for Padding to improve landscape mode of mobile devices */
       
       align-items: baseline;
       
-      transform: translateX(100%);
+      transform: translateX(100%); /* Per Default main navigation is pushed out of viewport (to the right) so user can´t see */
       transition: transform 350ms ease-out;
     }
     
+    /* navBar.js looks if data-visible is true. if user clicks on navtoggle data visible is set to true. if true then, the nav-slides out. */
     .main-navigation[data-visible="true"] {
       transform: translateX(0%);
     }
   
+    /* Per default -> Closed-Icon is displayed. Position is fixed to top, right corner on scroll */
     .mobile-nav-toggle {
       position: fixed;
       top: 1rem;
@@ -180,6 +183,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       border: 0;
     }
   
+    /* When aria-expanded is set to true by navbar.js -> other toggle-icon is displayed*/
     .mobile-nav-toggle[aria-expanded="true"] {
       background: url('../img/menu_icon/actual_hamburger.png');
       background-repeat: no-repeat;
@@ -261,9 +265,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 .hero-section-slim {
-    background: url('../img/pattern_pinkAndBlueTriangles_dark_web-optimized.png');
-    background-size: cover;
-  
     min-height: 66vh;
   }
   

@@ -6,11 +6,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Event Website || Impressum</title>
+  <title>Event Website || About</title>
 
 
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/about.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/basicContentPages.css">
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +20,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-  <script src="../navBar.js" defer></script>
+  <script src="navBar.js" defer></script>
 
 </head>
 
@@ -40,49 +42,38 @@
         </nav>
     </header>
 
-    <section class="hero-section-slim flex flex-center">
+    <section class="hero-section-slim about-page-hero flex flex-center">
 
         <div class="section-wrapper">
 
-            <div class="grid flex-center two-column-section">
+            <div class="grid flex-center">
                 <div>
-                    <h1>Imprint</h1>
+                    <h1>About {Event}</h1>
                 </div>
                 
             </div>
         </div>
     </section>
 
-    <section class="basic-content-page-section">
+    <section>
 
-        <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2><br />
-        <p>Max Feldmann<br />
-        Projektmanager, Product Owner und Digitalberater<br />
-        Kapuzinerstra&szlig;e 15<br />
-        96047 Bamberg</p><br />
-        
-        <h2>Kontakt</h2>
-        <p>Telefon: 01626432403<br />
-        E-Mail: max@space-4.de</p><br />
-        
-        <h2>Postadresse</h2>
-        <p>Markusstra&szlig;e 9<br />
-        96047 Bamberg<br />
-        (B&uuml;roanschrift)</p><br />
-        <h2>Umsatzsteuer-ID</h2>
-        <p>Umsatzsteuer-Identifikationsnummer gem&auml;&szlig; &sect; 27 a Umsatzsteuergesetz:<br />
-        DE326365187</p><br />
-        
-        <h2>EU-Streitschlichtung</h2>
-        <p>Die Europ&auml;ische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a>.<br /> Unsere E-Mail-Adresse finden Sie oben im Impressum.</p><br />
+        <div class="flex flex-center teaser box-shadow-inset">
+            <h2 class="signature-headline-style">Techno | Tech House | Detroit Techno</h2>
+        </div>
 
-        <h2>Verbraucher&shy;streit&shy;beilegung/Universal&shy;schlichtungs&shy;stelle</h2>
-        <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p><br />
-
-        <p>Quelle: <a href="https://www.e-recht24.de/impressum-generator.html">https://www.e-recht24.de/impressum-generator.html</a></p>
     </section>
 
+    
     <footer class="primary-footer grid">
+
+        <section>
+            <div class="covid-info-runner">
+                <img src="assets/icons/medical-mask.png" class="medical-mask">
+                <h2>Please respect any Covid-19 regulations at the venue</h2>
+                <p>Wear a mask || 2G+ is a <u>must</u> || Present certificates || Enjoy a safe evening!</p>
+            </div>
+        </section>
+
         <div class="section-wrapper">
             <div class="grid primary-footer-columns">
                 <div><h4 class="nav-label">About</h4>
@@ -113,5 +104,11 @@
     <div class="sp4-note">
         <p>Brought to you with 💜 and 💡 by <a href="https://www.space-4.de" target="_blank">Space Four</a></p>
     </div>
+
+    <!--
+        Wiggling Effect for Event-Card in Hero. To turn on also comment in transition in CSS class .event-card
+
+        <script>window.setInterval(() => {document.querySelector('.event-card').style.transform = `rotate(${4 + 4 * Math.random()}deg)`},1000)</script> 
+    -->
 </body>
 </html>
