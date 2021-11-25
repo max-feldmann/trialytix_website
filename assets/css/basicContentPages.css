@@ -3,6 +3,16 @@
     padding: 10rem;
   }
 
+.basic-content-page-section p {
+    margin: 1rem, 0;
+}
+
+.basic-content-pages-hero {
+    background: url("../img/pattern_pinkAndBlueTriangles_dark_web-optimized.png");
+    background-size: cover;
+    background-position: center;
+}
+
 @media (max-width: 55em) {
     .basic-content-page-section {
         padding: 2rem;
