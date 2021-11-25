@@ -16,7 +16,7 @@ jobs:
         fetch-depth: 2
 
     - name: FTP Deploy 
-      uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
         server: ssh.strato.de
         username: dev.space-4.de
