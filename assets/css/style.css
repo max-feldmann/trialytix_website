@@ -102,7 +102,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     /* Fallback if @supports does not work */
     background: hsl(0 0% 80% / 0.8);
   }
-  
+  g
   .backdrop-filter-blur-menu {
     /* Fallback if @supports does not work */
     background: hsl(0 0% 80% / 0.9);
