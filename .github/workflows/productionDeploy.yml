@@ -2,7 +2,7 @@ name: Prod Deploy
 
 on:
   push:
-    branches: [ master ]
+    branches: main
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,21 +15,12 @@ jobs:
       with:
         fetch-depth: 2
 
-    - name: Install Composer Dependencies
-      run: composer install --prefer-dist --no-progress --no-suggest
-
-    - name: npm install
-      run: npm install
-
-    - name: npm run bundle
-      run: npm run bundle
-
     - name: FTP Deploy 
       uses: SamKirkland/FTP-Deploy-Action@4.2.0
       with:
         server: ssh.strato.de
         username: dev.space-4.de
         password: ${{ secrets.STRATO_MASTERPASSWORD }}
-        protocol: ftps
+        protocol: ftps-legacy
         port: 22
-        local-dir: ./philtrum-run
+        local-dir: ../philtrum-run/
