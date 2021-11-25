@@ -4,7 +4,7 @@ name: ProdDeploy
 
 # Controls when the workflow will run
 on: push
-name: 🚀 Deploy website on push
+
 jobs:
   web-deploy:
     name: 🎉 Deploy
