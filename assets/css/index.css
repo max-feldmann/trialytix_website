@@ -185,7 +185,7 @@ p {
 /* Primary Footer*/
 
 .primary-footer {
-  padding: 5rem 0;
+  padding: 2rem 0;
   color: white;
   background: var(--brand_black);
   justify-items: center
@@ -194,7 +194,7 @@ p {
 .primary-footer-columns {
 grid-template-columns: 1fr 1fr 1fr;
 justify-items: center;
-padding-top: 5rem;
+padding-top: 2rem;
 border-top: solid 1px white;
 }
 
