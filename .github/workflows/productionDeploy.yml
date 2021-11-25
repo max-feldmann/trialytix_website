@@ -22,3 +22,4 @@ jobs:
         ftp-username: dev.space-4.de
         ftp-password: ${{ secrets.STRATO_MASTERPASSWORD }}
         local-dir: ./
+        git-ftp-args: --insecure
