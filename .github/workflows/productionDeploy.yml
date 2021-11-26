@@ -18,7 +18,7 @@ jobs:
     - name: FTP Deploy 
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        ftp-server: asdasdassftp://ssh.strato.de
+        ftp-server: sftp://ssh.strato.de:22/event-website
         ftp-username: dev.space-4.de
         ftp-password: ${{ secrets.STRATO_MASTERPASSWORD }}
         git-ftp-args: --insecure
