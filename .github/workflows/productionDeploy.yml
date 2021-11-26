@@ -17,8 +17,14 @@ jobs:
 
     - name: FTP Deploy 
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
-      with:
         ftp-server: sftp://ssh.strato.de:22/event-website
         ftp-username: dev.space-4.de
         ftp-password: ${{ secrets.STRATO_MASTERPASSWORD }}
         git-ftp-args: --insecure
+
+    - name: Send Push Notification
+      uses: techulus/push-github-action@1.0.0
+      env:
+        API_KEY: ${{ secrets.TECHULUSPUSHAPIKEY }}
+        MESSAGE: "Deployment in Event-Website durchgelaufen 🧪"
+        TITLE: Testing
