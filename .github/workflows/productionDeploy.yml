@@ -23,9 +23,19 @@ jobs:
         ftp-password: ${{ secrets.STRATO_MASTERPASSWORD }}
         git-ftp-args: --insecure
 
-    - name: Send Push Notification
+    - name: Send Success Push Notification
       uses: techulus/push-github-action@1.0.0
+      if: success()
       env:
         API_KEY: ${{ secrets.TECHULUSPUSHAPIKEY }}
-        MESSAGE: "Deployment in Event-Website durchgelaufen 🧪"
+        MESSAGE: "Deployment in Event-Website erfolgreich durchgelaufen! ✅"
+        TITLE: Testing
+        
+    
+    - name: Send failure Push Notification
+      uses: techulus/push-github-action@1.0.0
+      if: failure()
+      env:
+        API_KEY: ${{ secrets.TECHULUSPUSHAPIKEY }}
+        MESSAGE: "Deployment in Event-Website ist ge-failed! ❌"
         TITLE: Testing
